@@ -73,6 +73,11 @@ nephio:
         resourcegroup_name: porch
         resourcegroup_ns: porch-system
       - repo_uri: "{{ nephio_catalog_repo_uri }}"
+        pkg: nephio/optional/spire
+        version: main
+        async: 480
+        poll: 0
+      - repo_uri: "{{ nephio_catalog_repo_uri }}"
         pkg: nephio/core/nephio-operator
         version: main
         async: 480
@@ -87,11 +92,7 @@ nephio:
         version: main
         async: 480
         poll: 0
-      - repo_uri: "{{ nephio_catalog_repo_uri }}"
-        pkg: nephio/optional/spire
-        version: main
-        async: 480
-        poll: 0
+
 
 nephio_webui:
   k8s:
